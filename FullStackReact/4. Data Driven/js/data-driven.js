@@ -5,7 +5,10 @@ class App extends React.Component {
        return (
         <div className="notificationsFrame">
             <div className="panel">
-                <Header />
+                <Header title="Timeline" />
+                <Header title="Profile" />
+                <Header title="Settings" />
+                <Header title="Friends" />
                 <Content />
             </div>
         </div>
@@ -22,7 +25,7 @@ class Header extends React.Component {
                     <div className="dashBottom"></div>
                     <div className="circle"></div>
                 </div>
-                <span className="title">Timeline</span>
+                <span className="title">{this.props.title}</span>
                 <input type="text" className="searchInput" placeholder="Search..." />
                 <div className="fa fa-search searchIcon"></div>
             </div>
